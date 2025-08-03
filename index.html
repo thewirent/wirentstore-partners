@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Our Partners</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-black.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="xstyle.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="https://thewirent.github.io/wirentstore/">
+                <img class="logo" src="images/logo-white.png">
+            </a>
+                <button class="discord" id="errorBtnYT">
+                    <img class="discord-logo" src="images/discord-logo.png">
+                </button>
+                <button class="youtube" id="errorBtnDC">
+                    <img class="youtube-logo" src="images/youtube-logo.png">
+                </button>
+            <a href="https://www.twitch.tv/wirent_" target="_blank">
+                <button class="twitch" >
+                    <img class="twitch-logo" src="images/twitch-logo.png">
+                </button>
+                </a>
+                <div class="error lang" id="error" key="error">
+                    <p class="error-txt" id="error-txt">Unfortunately, this URL doesn't work yet.</p>
+                </div>
+                <script>
+                    const btnyt = document.getElementById('errorBtnYT');
+                    const popupyt = document.getElementById('error');
+                
+                    btnyt.addEventListener('click', () => {
+                    popupyt.style.display = 'block';
+                    setTimeout(() => {
+                        popupyt.style.opacity = '1';
+                    }, 1);
+                
+                    setTimeout(() => {
+                        popupyt.classList.add('move');
+                    }, 500);
+                    });
+                    popupyt.addEventListener('animationend', () => {
+                    popupyt.classList.remove('move');
+                    popupyt.style.opacity = '0';
+                    popupyt.style.right = '25px';
+                    popupyt.style.display = 'none';
+                });
+                </script>
+                <script>
+                    const btndc = document.getElementById('errorBtnDC');
+                    const popupdc = document.getElementById('error');
+                
+                    btndc.addEventListener('click', () => {
+                    popupdc.style.display = 'block';
+                    setTimeout(() => {
+                        popupdc.style.opacity = '1';
+                        }, 1);
+                    setTimeout(() => {
+                        popupdc.classList.add('move');
+                    }, 500);
+                    });
+                    popupdc.addEventListener('animationend', () => {
+        popupdc.classList.remove('move');
+        popupdc.style.opacity = '0';
+        popupdc.style.right = '25px';
+        popupdc.style.display = 'none';
+    });
+                </script>
+        </div>
+    </header>
+    <div class="bg-pyroge">
+        <img src="images/pyroge.png" class="pyroge">
+        <div class="pfbg-pyroge"></div>
+        <p class="title-pyroge">Pyroge</p>
+        <p class="description-pyroge">A Twitch streamer.</p>
+        <a href="https://www.twitch.tv/pyroge_tv" target="_blank">
+            <button class="twitch-pyroge">
+                <img src="images/twitch-logo.png" class="twitch-logo-pyroge">
+            </button>
+        </a>
+    </div>
+</body>
+</html>
